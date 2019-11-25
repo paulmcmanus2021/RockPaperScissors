@@ -11,27 +11,27 @@ class TestRPS < Minitest::Test
   end
   #rock tests
   def test_game__rp
-    assert_equal("Paper Wins",Game.check('rock','paper'))
+    assert_equal("Player 2 Wins",Game.check('rock','paper'))
   end
 
   def test_game__rs
-    assert_equal("Rock Wins",Game.check('rock','scissors'))
+    assert_equal("Player 1 Wins",Game.check('rock','scissors'))
   end
   #paper tests
   def test_game__pr
-    assert_equal("Paper Wins",Game.check('paper','rock'))
+    assert_equal("Player 1 Wins",Game.check('paper','rock'))
   end
 
   def test_game__ps
-    assert_equal("Scissors Wins",Game.check('paper','scissors'))
+    assert_equal("Player 2 Wins",Game.check('paper','scissors'))
   end
   #scissors tests
   def test_game__sr
-    assert_equal("Rock Wins",Game.check('scissors','rock'))
+    assert_equal("Player 2 Wins",Game.check('scissors','rock'))
   end
 
   def test_game__sp
-    assert_equal("Scissors Wins",Game.check('scissors','paper'))
+    assert_equal("Player 1 Wins",Game.check('scissors','paper'))
   end
 
 

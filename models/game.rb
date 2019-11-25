@@ -7,22 +7,22 @@ class Game
       @result = 'Draw'
 
     elsif move1 == 'rock' && move2 == 'paper'
-      @result = 'Paper Wins'
+      @result = 'Player 2 Wins'
 
     elsif move1 == 'rock' && move2 == 'scissors'
-      @result = 'Rock Wins'
+      @result = 'Player 1 Wins'
 
     elsif move1 == 'paper' && move2 == 'rock'
-      @result = 'Paper Wins'
+      @result = 'Player 1 Wins'
 
     elsif move1 == 'paper' && move2 == 'scissors'
-      @result = 'Scissors Wins'
+      @result = 'Player 2 Wins'
 
     elsif move1 == 'scissors' && move2 == 'rock'
-      @result = 'Rock Wins'
+      @result = 'Player 2 Wins'
 
     elsif move1 == 'scissors' && move2 == 'paper'
-      @result = 'Scissors Wins'
+      @result = 'Player 1 Wins'
 
     else
       @result = nil
