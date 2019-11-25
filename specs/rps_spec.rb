@@ -1,47 +1,38 @@
-require 'minitest/autorun'
-require 'minitest/reporters'
-require '..models/game'
+require ('minitest/autorun')
+require ('minitest/reporters')
+require ('./models/game')
 
 MiniTest:: Reporters.use! Minitest::Reporters::SpecReporter.new
 
 class TestRPS < Minitest::Test
-#rock tests
-  def test_rock_paper
-    assert_equal ("Paper wins!", Game(move1, move2))
+
+  def test_game__draw
+    assert_equal("Draw",Game.check('scissors', 'scissors'))
+  end
+  #rock tests
+  def test_game__rp
+    assert_equal("Paper Wins",Game.check('rock','paper'))
   end
 
-#   def test_rock_scissors
-#
-#   end
-#
-#   def test_rock_rock
-#
-#   end
-# #paper tests
-#   def test_paper_rock
-#
-#   end
-#
-#   def test_paper_scissors
-#
-#   end
-#
-#   def test_paper_paper
-#
-#   end
-# #scissors tests
-#   def test_scissors_rock
-#
-#   end
-#
-#   def test_scissors_paper
-#
-#   end
-#
-#   def test_scissors_scissors
-#
-#   end
+  def test_game__rs
+    assert_equal("Rock Wins",Game.check('rock','scissors'))
+  end
+  #paper tests
+  def test_game__pr
+    assert_equal("Paper Wins",Game.check('paper','rock'))
+  end
 
+  def test_game__ps
+    assert_equal("Scissors Wins",Game.check('paper','scissors'))
+  end
+  #scissors tests
+  def test_game__sr
+    assert_equal("Rock Wins",Game.check('scissors','rock'))
+  end
+
+  def test_game__sp
+    assert_equal("Scissors Wins",Game.check('scissors','paper'))
+  end
 
 
 
