@@ -8,7 +8,23 @@ get '/' do
   erb(:home)
 end
 
-get '/:move1/:move2' do
+get '/game' do
+  erb(:game)
+end
+
+get '/game/rock' do
+  erb(:rock)
+end
+
+get '/game/paper' do
+  erb(:paper)
+end
+
+get '/game/scissors' do
+  erb(:scissors)
+end
+
+get '/game/:move1/:move2' do
   move1 = params['move1']
   move2 = params['move2']
   @result = Game.check(move1, move2)
